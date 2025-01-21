@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abela Grosir</title>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo-container">
+            <img src="img/home.png" alt="Logo" class="logo-image">
+            <a href="#" class="logo-text">Abela Grosir</a>
+        </div>        
+            <div class="menu-toggle" onclick="toggleSidebar()">☰</div>
+        </div>
+    </header>
+
+    <!-- Sidebar -->
+    <nav class="sidebar" id="sidebar">
+        <div class="sidebar-header">
+            <h3>Menu</h3>
+            <span class="close-btn" onclick="toggleSidebar()">&times;</span>
+        </div>
+        <ul class="sidebar-menu">
+            <li><a href="#home">Beranda</a></li>
+            <li><a href="#categories">Kategori</a></li>
+            <li><a href="#footer">Kontak</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Selamat Datang di Abela Grosir</h1>
+            <p>Pusat grosir kebutuhan rumah tangga, perlengkapan kantor, dan banyak lagi dengan harga terbaik!</p>
+            <a href="#categories" class="btn-primary">Jelajahi Kategori</a>
+        </div>
+    </section>
+
+    <!-- Semua Produk -->
+    <section class="all-products">
+        <h2>Semua Produk</h2>
+        <div class="all-products-container">
+            <div class="scroll-track">
+                <!-- Isi Produk (diulang secara manual atau otomatis via JavaScript jika item banyak) -->
+                <div class="product-item"><img src="img/BolpoinGMSpin.jpg" alt="Bolpoin GM Spin"></div>
+                <div class="product-item"><img src="img/PensilParko2B.jpg" alt="Pensil Parko 2B"></div>
+                <div class="product-item"><img src="img/TipeX.jpg" alt="Tipe-X"></div>
+                <div class="product-item"><img src="img/CutterOrlee.jpg" alt="Cutter Orlee"></div>
+                <div class="product-item"><img src="img/DispenserMiyako.jpg" alt="Dispenser Miyako"></div>
+                <div class="product-item"><img src="img/SabunCuciPiringEkonomis.jpg" alt="Sabun Cuci Piring Ekonomis"></div>
+                <div class="product-item"><img src="img/Vixal600ml.jpg" alt="Vixal 600ml"></div>
+                <div class="product-item"><img src="img/SetrikaSanex.jpg" alt="Setrika Sanex"></div>
+                <div class="product-item"><img src="img/SenterCasFox.jpg" alt="Senter Cas Fox"></div>
+                <div class="product-item"><img src="img/EsepuluhMinyakUrut.jpg" alt="Minyak Urut"></div>
+                
+                <!-- Duplikat item untuk seamless effect -->
+                <div class="product-item"><img src="img/BolpoinGMSpin.jpg" alt="Bolpoin GM Spin"></div>
+                <div class="product-item"><img src="img/PensilParko2B.jpg" alt="Pensil Parko 2B"></div>
+                <div class="product-item"><img src="img/TipeX.jpg" alt="Tipe-X"></div>
+                <div class="product-item"><img src="img/CutterOrlee.jpg" alt="Cutter Orlee"></div>
+                <div class="product-item"><img src="img/DispenserMiyako.jpg" alt="Dispenser Miyako"></div>
+                <div class="product-item"><img src="img/SabunCuciPiringEkonomis.jpg" alt="Sabun Cuci Piring Ekonomis"></div>
+                <div class="product-item"><img src="img/Vixal600ml.jpg" alt="Vixal 600ml"></div>
+                <div class="product-item"><img src="img/SetrikaSanex.jpg" alt="Setrika Sanex"></div>
+                <div class="product-item"><img src="img/SenterCasFox.jpg" alt="Senter Cas Fox"></div>
+                <div class="product-item"><img src="img/EsepuluhMinyakUrut.jpg" alt="Minyak Urut"></div>
+            </div>
+        </div>
+    </section>       
+
+    <!-- Kategori -->
+    <section class="categories" id="categories">
+        <h2>Kategori Produk</h2>
+        <div class="category-list">
+            <div class="category-card">
+                <h3>Perlengkapan Kantor</h3>
+                <img src="img/BolpoinGMSpin.jpg" alt="Perlengkapan Kantor">
+                <p>Bolpoin, pensil, tipe-x, dan lainnya</p>
+                <a href="#office-products" class="btn-secondary">Lihat Produk</a>
+            </div>
+            <div class="category-card">
+                <h3>Peralatan Rumah Tangga</h3>
+                <img src="img/DispenserMiyako.jpg" alt="Peralatan Rumah Tangga">
+                <p>Dispenser, sabun, setrika, dan lainnya</p>
+                <a href="#home-products" class="btn-secondary">Lihat Produk</a>
+            </div>
+            <div class="category-card">
+                <h3>Produk Lainnya</h3>
+                <img src="img/SenterCasFox.jpg" alt="Produk Lainnya">
+                <p>Senter, minyak urut, dan lainnya</p>
+                <a href="#other-products" class="btn-secondary">Lihat Produk</a>
+            </div>
+        </div>
+    </section>
+
+ <!-- Produk -->
+<section class="products" id="office-products">
+    <h2>Perlengkapan Kantor</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="img/BolpoinGMSpin.jpg" alt="Bolpoin GM Spin">
+            <p>Bolpoin GM Spin</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Bolpoin%20GM%20Spin%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/PensilParko2B.jpg" alt="Pensil Parko 2B">
+            <p>Pensil Parko 2B</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Pensil%20Parko%202B%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/TipeX.jpg" alt="Tipe-X">
+            <p>Tipe-X</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Tipe-X%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/CutterOrlee.jpg" alt="Cutter Orlee">
+            <p>Cutter Orlee</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Cutter%20Orlee%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="home-products">
+    <h2>Peralatan Rumah Tangga</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="img/DispenserMiyako.jpg" alt="Dispenser Miyako">
+            <p>Dispenser Miyako</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Dispenser%20Miyako%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/SabunCuciPiringEkonomis.jpg" alt="Sabun Cuci Piring Ekonomis">
+            <p>Sabun Cuci Piring Ekonomis</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Sabun%20Cuci%20Piring%20Ekonomis%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/Vixal600ml.jpg" alt="Vixal 600ml">
+            <p>Vixal 600ml</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Vixal%20600ml%202B%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/SetrikaSanex.jpg" alt="Setrika Sanex">
+            <p>Setrika Sanex</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Setrika%20Sanex%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+    </div>
+</section>
+
+<section class="products" id="other-products">
+    <h2>Produk Lainnya</h2>
+    <div class="product-list">
+        <div class="product-card">
+            <img src="img/SenterCasFox.jpg" alt="Senter Cas Fox">
+            <p>Senter Cas Fox</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Senter%20Cas%20Fox%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/EsepuluhMinyakUrut.jpg" alt="Minyak Urut">
+            <p>Esepuluh Minyak Urut</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Esepuluh%20Minyak%20Urut%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/EsepuluhBalsemAromaTerapiLemon.jpg" alt="Pensil Parko 2B">
+            <p>Esepuluh Balsem Aroma Terapi Lemon</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Esepuluh%20Balsem%20Aroma%20Terapi%20Lemon%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+        <div class="product-card">
+            <img src="img/MinyakKayuPutihNature10.jpg" alt="Minyak Kayu Putih Nature 10">
+            <p>Minyak Kayu Putih <br> Nature 10</p>
+            <a href="http://wa.me/6285220210038?text=Apakah%20produk%20Minyak%20Kayu%20Putih%20Nature%2010%20tersedia%3F%20Berapa%20harganya%3F" class="btn-whatsapp">
+                <img src="img/whatsapp.png" alt="WhatsApp Icon" class="whatsapp-icon"> Minat? Klik
+            </a>
+        </div>
+    </div>
+</section>
+
+
+   <!-- Footer -->
+<footer class="footer" id="footer"> <!-- Tambahkan id="footer" pada tag footer -->
+    <h3>Abela Grosir</h3>
+    <p>Jl. Padang Raya Leyangan, RT 01/RW 01, Ungaran, Jawa Tengah, Indonesia 50519</p>
+    <p>
+        <a href="https://www.instagram.com/mitraabelagrosir?igsh=MXQ2Y3FtdGR0NzUxYw==" target="_blank">
+            <img src="img/instagram.png" alt="Instagram" class="social-icon"> mitraabelagrosir
+        </a>
+    </p>
+    <p>
+        <a href="https://wa.me/6285220210038" target="_blank">
+            <img src="img/whatsappkontakkami.png" alt="WhatsApp" class="social-icon"> 0852-2021-0038
+        </a>
+    </p>
+    <p>&copy; 2025 Abela Grosir</p>
+    <p>Dibuat dengan <span style="color: #ffcc00;">&#10084;</span> oleh Widia Jelita Gulo</p>
+</footer>
+
+    
+
+    <script>
+        function toggleSidebar() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

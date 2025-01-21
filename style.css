@@ -1,0 +1,657 @@
+/* General Styles */
+body {
+    font-family: 'Jost', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: #008080;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-image {
+    width: 70px; /* Ukuran gambar logo lebih besar */
+    height: auto;
+    margin-right: 15px;
+}
+
+.logo-text {
+    font-size: 2rem; /* Memperbesar ukuran teks */
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+}
+
+/* Footer */
+.footer {
+    background: linear-gradient(135deg, #2f4f4f, #008080);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer a {
+    color: #ffd700;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.footer h3 {
+    margin-bottom: 0; /* Menurunkan jarak bawah h2 */
+}
+
+.footer p {
+    margin: 0;
+}
+
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background: #2f4f4f;
+    color: white;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-header {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-btn {
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.sidebar-menu {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar-menu li {
+    padding: 15px;
+    border-bottom: 1px solid #555;
+}
+
+.sidebar-menu a {
+    color: white;
+    font-size: 1rem;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #20b2aa, #2e8b57);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+/* Kategori */
+.categories {
+    padding: 40px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Mengatur grid untuk kategori produk */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid responsif */
+    gap: 15px; /* Mengurangi jarak antar item */
+    justify-items: center; /* Menyusun item ke tengah */
+    max-width: 1200px; /* Membatasi lebar grid agar tetap teratur */
+    margin: 0 auto; /* Grid tetap berada di tengah */
+    padding: 0;
+}
+
+/* Pengaturan untuk tiap kartu kategori */
+.category-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+    width: 100%;
+    max-width: 250px; /* Membatasi lebar kartu agar lebih rapi */
+}
+
+/* Responsif pada ponsel (480px) */
+@media (max-width: 480px) {
+    .category-list {
+        grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom di layar kecil */
+    }
+    .category-card {
+        padding: 10px;
+        max-width: 180px; /* Lebar kartu sedikit lebih kecil di ponsel */
+    }
+    .category-card h3 {
+        font-size: 0.9rem;
+    }
+    .category-card p {
+        font-size: 0.8rem;
+    }
+}
+
+
+/* Produk */
+.products {
+    padding: 40px 20px;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.product-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    width: 200px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Scroll Smooth */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100%;
+    width: 250px;
+    background: #2f4f4f;
+    color: white;
+    overflow-y: auto;
+    transition: right 0.3s ease;
+    z-index: 1000;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+.sidebar-menu li a:hover {
+    color: #ffcc00;
+}
+
+/* Section Style */
+.products {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+/* Tombol utama (Jelajahi Kategori) */
+.btn-primary {
+    background: #20b2aa;
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 30px;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-primary:hover {
+    background: #2e8b57;
+    transform: scale(1.05);
+}
+
+/* Tombol sekunder (Lihat Produk) */
+.btn-secondary {
+    background: #ffcc00;
+    color: #2f4f4f;
+    padding: 10px 25px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-secondary:hover {
+    background: #ffa500;
+    transform: scale(1.05);
+}
+
+/* Tombol WhatsApp */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    background-color: #25D366;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-decoration: none;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128C7E;
+    transform: scale(1.05);
+}
+
+.whatsapp-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Default styling for all sections */
+.products {
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding-bottom: 10px;
+}
+
+/* Styling for each section based on ID */
+#office-products {
+    background-color: #f0f8ff; /* Light blue */
+    color: #333;
+}
+
+#home-products {
+    background-color: #fff0f5; /* Lavender blush */
+    color: #333;
+}
+
+#other-products {
+    background-color: #f5f5dc; /* Beige */
+    color: #333;
+}
+
+#contact {
+    background-color: #e0ffff; /* Light cyan */
+    color: #333;
+}
+
+/* Button Styling */
+.btn-whatsapp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #25d366;
+    padding: 10px;
+    margin-top: 10px;
+    color: white;
+    font-size: 1rem;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn-whatsapp:hover {
+    background-color: #128c7e;
+}
+
+.whatsapp-icon {
+    width: 20px;
+    margin-right: 8px;
+}
+
+/* Product Card Styling */
+.product-card {
+    margin: 10px;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    max-width: 100%;
+    border-radius: 5px;
+}
+
+.product-card p {
+    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+.contact p {
+    text-align: center;
+}
+
+.social-icon {
+    width: 30px; /* Atur ukuran sesuai kebutuhan */
+    height: 30px; /* Atur ukuran sesuai kebutuhan */
+    vertical-align: middle; /* Agar ikon sejajar dengan teks */
+    margin-right: 5px; /* Memberi jarak antara ikon dan teks */
+}
+
+/* Animasi pembesaran produk */
+.product-card {
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Efek saat produk dipilih */
+.product-card.selected {
+    transform: scale(1.2); /* Membesar 20% */
+}
+
+/* Section Semua Produk */
+.all-products {
+    padding: 40px 20px;
+    background-color: #f5f5f5;
+    text-align: center;
+}
+
+.all-products h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.all-products-container {
+    overflow: hidden; /* Menyembunyikan elemen di luar kontainer */
+    position: relative;
+    width: 100%;
+    height: 180px;
+}
+
+.scroll-track {
+    display: flex;
+    width: max-content; /* Menyesuaikan lebar berdasarkan konten */
+    animation: scroll-left 15s linear infinite; /* Animasi bergulir tanpa henti */
+}
+
+.product-item {
+    flex: 0 0 auto; /* Mencegah elemen menyusut */
+    width: 150px; /* Lebar produk */
+    height: 150px; /* Tinggi produk */
+    margin-right: 20px; /* Jarak antar produk */
+}
+
+.product-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Animasi Scroll */
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0); /* Mulai dari posisi awal */
+    }
+    100% {
+        transform: translateX(-50%); /* Bergeser setengah lebar konten */
+    }
+}
+
+/* Produk */
+.products {
+    padding: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 15px;
+    justify-content: center; /* Posisi horizontal */
+    align-items: center; /* Posisi vertikal */
+    justify-items: center; /* Menempatkan elemen di tengah dalam kolom */
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-card:hover {
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    font-size: 0.9rem;
+    margin: 5px 0 0;
+}
+
+/* Responsivitas */
+@media (max-width: 1024px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .product-card {
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .product-card p {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Menampilkan 2 kolom di layar kecil */
+    }
+    .product-card {
+        padding: 5px;
+    }
+    .product-card img {
+        max-height: 100px; /* Membatasi tinggi gambar pada ponsel */
+    }
+    .product-card p {
+        font-size: 0.7rem;
+    }
+}
+
+/* Set box-sizing ke border-box untuk seluruh elemen */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Menghindari scroll horizontal */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Pastikan tidak ada scroll horizontal */
+}
+
+/* Membuat gambar responsif */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Kategori */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); /* Grid responsif */
+    gap: 15px;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.category-card {
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: auto;
+}
+
+/* Produk */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); /* Grid responsif */
+    gap: 15px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-card {
+    background: #fff;
+    border-radius: 8px;
+    padding: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Tombol */
+.btn-primary,
+.btn-secondary {
+    width: 100%;
+    text-align: center;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 30px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Mengatur tata letak sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background: #2f4f4f;
+    color: white;
+    transition: right 0.3s ease;
+}
+
+.sidebar.active {
+    right: 0;
+}
+
+/* Responsivitas di berbagai perangkat */
+@media (max-width: 1024px) {
+    .category-list, .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+    .category-card, .product-card {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .category-list, .product-list {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+    .category-card, .product-card {
+        padding: 8px;
+    }
+    .category-card h3, .product-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .category-list, .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Dua kolom untuk ponsel */
+    }
+    .category-card, .product-card {
+        padding: 5px;
+    }
+    .category-card h3, .product-card p {
+        font-size: 0.8rem;
+    }
+}
