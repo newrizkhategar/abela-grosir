@@ -593,18 +593,35 @@ img {
     transition: transform 0.3s ease-in-out;
 }
 
-/* Tombol */
-.btn-primary,
-.btn-secondary {
-    width: 100%;
-    text-align: center;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    margin-top: 15px;
-    transition: background 0.3s ease, transform 0.2s ease;
+/* Tombol di dalam kartu produk */
+.product-card .btn-primary,
+.product-card .btn-secondary {
+    display: inline-block; /* Pastikan tombol tidak memenuhi lebar penuh */
+    padding: 8px 15px; /* Kurangi padding untuk tombol agar lebih kecil */
+    font-size: 0.85rem; /* Sesuaikan ukuran font */
+    border-radius: 5px; /* Buat sudut sedikit lebih kecil */
+    text-transform: capitalize; /* Ubah huruf kapital menjadi normal */
+    max-width: 120px; /* Berikan batas maksimum lebar tombol */
+    width: auto; /* Tombol menyesuaikan dengan teks */
+    margin: 5px auto; /* Atur margin untuk posisi */
+    text-align: center; /* Pastikan teks tombol tetap di tengah */
 }
+
+.product-card .btn-primary:hover,
+.product-card .btn-secondary:hover {
+    transform: scale(1.05); /* Efek hover tetap terlihat */
+}
+
+/* Responsivitas pada tombol */
+@media (max-width: 480px) {
+    .product-card .btn-primary,
+    .product-card .btn-secondary {
+        font-size: 0.75rem; /* Ukuran font lebih kecil di layar kecil */
+        padding: 6px 12px; /* Kurangi padding di perangkat kecil */
+        max-width: 100px; /* Lebar maksimal tombol lebih kecil */
+    }
+}
+
 
 /* Mengatur tata letak sidebar */
 .sidebar {
@@ -654,4 +671,85 @@ img {
     .category-card h3, .product-card p {
         font-size: 0.8rem;
     }
+}
+
+@media (max-width: 480px) {
+    .product-list {
+        grid-template-columns: repeat(2, 1fr); /* Tetap dengan 2 kolom */
+        gap: 10px; /* Kurangi jarak antar produk */
+    }
+    .product-card {
+        padding: 5px; /* Kurangi padding di dalam kartu */
+        max-width: 160px; /* Batasi ukuran maksimum kartu produk */
+    }
+    .product-card img {
+        max-height: 80px; /* Batasi tinggi gambar pada layar kecil */
+        object-fit: cover; /* Pastikan gambar tetap rapi */
+    }
+    .product-card p {
+        font-size: 0.75rem; /* Sesuaikan ukuran teks */
+        margin-top: 5px;
+    }
+}
+
+/* Semua Produk */
+.all-products-container {
+    display: flex;
+    flex-wrap: nowrap; /* Membuat elemen berada dalam satu baris tanpa membungkus */
+    gap: 16px; /* Jarak antar elemen */
+    overflow-x: auto; /* Menambahkan scroll horizontal */
+    padding: 16px; /* Jarak di dalam kontainer */
+}
+
+.scroll-track {
+    display: flex; /* Membuat elemen anak menjadi fleksibel */
+    gap: 16px; /* Jarak antar elemen */
+}
+
+.product-item {
+    flex: 0 0 auto; /* Mencegah item menyusut */
+    width: 150px; /* Lebar tetap untuk setiap item */
+    height: 150px; /* Tinggi tetap untuk setiap item */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    overflow: hidden; /* Jika gambar besar, tersembunyi */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.product-item img {
+    max-width: 100%; /* Pastikan gambar tidak keluar dari kontainer */
+    max-height: 100%;
+    object-fit: contain; /* Gambar diatur agar proporsi tetap */
+}
+
+/* Kategori Produk */
+.category-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Menambah ukuran minimal */
+    gap: 20px; /* Menambah jarak antar kategori */
+}
+
+/* Produk */
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Membuat produk lebih lebar */
+    gap: 20px; /* Menambah jarak antar produk */
+}
+
+/* Untuk mobile */
+@media (max-width: 768px) {
+    .product-list, .category-list {
+        grid-template-columns: repeat(2, 1fr); /* Menggunakan dua kolom pada layar kecil */
+    }
+}
+
+/* Memperbaiki gambar produk untuk responsivitas */
+.product-card img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover; /* Menjaga aspek rasio gambar */
 }
